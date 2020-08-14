@@ -14,6 +14,15 @@ export default {
       msg: "URL is usually used to transfer paramters",
     };
   },
+  //hook
+  beforeRouteEnter:(to, from, next) =>{
+    console.log("ready to enter this component");
+    next(true)//i am a toggle
+  },
+  beforeRouteLeave:(to, from, next) =>{
+    console.log("ready to leave this component");
+    next(true)//i am a toggle
+  }
 };
 </script>
 

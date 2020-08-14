@@ -6,11 +6,17 @@ import hello from '@/components/hello'
 import ciao from '@/components/ciao'
 import multiPage from '@/components/multiPage'
 import urlParams from '@/components/urlParams'
+import error from '@/components/error'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: "history",  //消除url中的#号
   routes: [
+    {
+      path: '*',
+      component: error
+    },
     {
       path: '/',
       name: 'HelloWorld',   //模板参数传递, 通过name选项, 少用
@@ -18,7 +24,8 @@ export default new Router({
         default: HelloWorld,
         left: hello,
         right: ciao
-      }
+      },
+      alias: '/home'
     },
     {
       path: '/goHome',

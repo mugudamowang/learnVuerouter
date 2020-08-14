@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
+    <transition name="fade" mode="out-in">
     <router-view class="green"></router-view>
+    </transition>
   </div>
 </template>
 
