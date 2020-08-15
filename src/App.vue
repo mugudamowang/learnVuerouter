@@ -18,6 +18,7 @@
       <router-link :to="{name:'/sayHi/ciao', params:{say:'$route.params.say: cooooool~'}}">Ciao</router-link>&nbsp;|
       <router-link to="/urlParams/233/666">URLparams</router-link>
       <router-link to="/fuck233">404</router-link>
+      <router-link to="/vuexCount">vuex</router-link>
 
       <!-- 模板参数name接受使用$route, 不同页面会显示对应的name值 -->
       <p>name: {{ $route.name}}</p>

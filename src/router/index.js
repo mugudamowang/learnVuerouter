@@ -7,6 +7,7 @@ import ciao from '@/components/ciao'
 import multiPage from '@/components/multiPage'
 import urlParams from '@/components/urlParams'
 import error from '@/components/error'
+import vuexCount from '@/components/vuexCount'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
     {
       path: '*',
       component: error
+    },
+    {
+      path: '/vuexCount',
+      name: 'vuexCount',
+      component: vuexCount
     },
     {
       path: '/',
@@ -53,9 +59,9 @@ export default new Router({
       path: '/sayHi',
       component: sayHi,
       children: [
-        {path: '/',name:'hi',component: sayHi},   //sayHi can be called itself
-        {path: 'hello', name: '/sayHi/hello',component: hello},  //it's nest page don't use '/'
-        {path: 'ciao', name:'/sayHi/ciao',component: ciao}
+        { path: '/', name: 'hi', component: sayHi },   //sayHi can be called itself
+        { path: 'hello', name: '/sayHi/hello', component: hello },  //it's nest page don't use '/'
+        { path: 'ciao', name: '/sayHi/ciao', component: ciao }
       ]
     }
   ]
